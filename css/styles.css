@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    /* Fonts */
+    --header1: calc(2rem + 1vw);
+    --header2: calc(3.5rem + 1vw);
+    --header3: calc(3rem + 1vw);
+    --header4: calc(2.4rem + 1vw);
+    --text: calc(2rem);
+    --big: calc(2.4rem + 1vw);
+
+    /* Colors */
+    --mainColor:#191a1e;
+    --maninColorTwo:#2e2f33;
+    --mainColorThree:#c4c4c4;
+    --white:#fff;
+    --secondaryColor:#ff593e;
+    --secondaryColorTwo:#ff9580;
+
+
+}
+
+body{
+    font-family: 'Frank Ruhl Libre', serif;
+    
+}
+
+main{
+    height: auto;
+}
+
+h1{
+    font-size: var(--header1);
+    
+}
+
+h2{
+    font-size: var(--header2);
+}
+
+h3{
+    font-size: var(--header3);
+}
+
+h4{
+    font-size: var(--header4);
+}
+
+li,
+label,
+input,
+button,
+a,
+p{
+    font-size: var(--text);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainColor);
+    
+}
+
+button{
+    padding: 1rem 4rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background:var(--secondaryColor) ;
+    border-radius: 1.1rem;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Main-Header Section */ 
+
+.main-header{
+    background: var(--white);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    
+}
+
+#logo{
+    flex: 1 1 20rem;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 20rem;
+}
+
+.hero{
+    min-height: 90vh;
+    width: 95%;
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.hero-introduction{
+    flex: 2 1 40rem;
+    text-align: center;
+}
+
+.hero-introduction h2{
+    padding-top: 3rem;
+}
+
+.hero-introduction p{
+    padding: 2rem 5rem;
+}
+
+.hero-introduction a{
+    padding: 2rem 8rem;
+    border: solid var(--maninColorTwo);
+    margin-bottom: 3rem;
+}
+
+.hero-images{
+    flex: 1 1 40rem;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.burger,
+.menu-check{
+    display: none;
+}
+
+/* Section Galleria */
+
+.galleria-titulo{
+    padding: 1rem;
+}
+
+.galleria-titulo h2{
+    margin: 2rem 0 0 0;
+}
+
+.galleria-imagenes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+.galleria-imagenes .card{
+    width: 30%;
+    height: 50vh;
+    position: relative;
+    margin: 5rem 2rem;
+}
+
+.galleria-imagenes .card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.galleria-imagenes .card button{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#carrito{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    color: white;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/* Modal Section */
+
+.modal-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal{
+    background: white;
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2);
+    justify-content: space-around;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    margin: 0.5rem 1rem ;
+    cursor: pointer;
+}
+
+
+/* Footer Section */
+
+footer{
+    margin-top: 5rem;
+    min-height: 10vh;
+    background: var(--mainColorThree);
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 842px){
+
+    .hero{
+        width: 100%;
+    }
+
+    /* Burger Menu */
+
+    .burger{
+        position: relative;
+        display: block;
+    }
+    .burger span{
+        padding: 0.2rem 2rem;
+        background: var(--secondaryColor);
+        display: block;
+        margin: 0.5rem 0;
+        border-radius: 0.5rem;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links a{
+        color: var(--white);
+        font-size: var(--header4);
+    }
+
+    .nav-links{
+        background-color: var(--maninColorTwo);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 1s ease;
+        
+    }
+
+    .menu-check{
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(5%, -50%);
+        width: 5rem;
+        height: 5rem;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 100;
+        display: block;
+    }
+
+    .menu-check:checked + .nav-links{
+        transform: translate(-100%);
+    }
+
+    .menu-check:checked ~ .burger span{
+        background: var(--secondaryColor);
+    }
+
+    .menu-check:checked ~ .burger span:nth-child(1){
+        transform: rotateZ(45deg) translateY(300%);
+    }
+
+    .menu-check:checked ~ .burger span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-check:checked ~ .burger span:nth-child(3){
+        transform: rotateZ(-45deg) translateY(-300%);
+    }
+
+
+}
