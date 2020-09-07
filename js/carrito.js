@@ -4,6 +4,7 @@
 const carrito = document.getElementById('carrito');
 const galeriaImagenes = document.getElementById('galleria');
 const card = document.getElementById('card');
+const button = document.querySelectorAll('button');
 
 
 
